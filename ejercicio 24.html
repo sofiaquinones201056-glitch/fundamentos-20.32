@@ -1,0 +1,18 @@
+<script>
+    // Función que calcula el promedio de un array de números
+function calcularPromedio(numeros) {
+    let suma = 0;
+
+    for (let i = 0; i < numeros.length; i++) {
+        suma += numeros[i];
+    }
+
+    return suma / numeros.length;
+}
+
+// Array de ejemplo
+let numeros = [10, 20, 30, 40, 50];
+
+// Llamada a la función
+console.log("El promedio es:", calcularPromedio(numeros));
+</script>

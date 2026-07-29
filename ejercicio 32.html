@@ -1,0 +1,31 @@
+<script>
+    // Crear objeto carrito con productos anidados
+const carrito = {
+    cliente: "Karen Sofia",
+    productos: [
+        {
+            nombre: "Laptop",
+            precio: 1200
+        },
+        {
+            nombre: "Mouse",
+            precio: 50
+        },
+        {
+            nombre: "Teclado",
+            precio: 80
+        }
+    ]
+};
+
+// Calcular el total de los productos
+let total = 0;
+
+for (let i = 0; i < carrito.productos.length; i++) {
+    total += carrito.productos[i].precio;
+}
+
+// Mostrar resultado
+console.log("Productos del carrito:", carrito.productos);
+console.log("Total a pagar:", total);
+</script>
