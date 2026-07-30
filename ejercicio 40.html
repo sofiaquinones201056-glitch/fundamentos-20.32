@@ -1,0 +1,23 @@
+<script>
+    function validarFormulario(nombre, correo) {
+    if (nombre === "") {
+        throw new Error("El nombre no puede estar vacío.");
+    }
+
+    if (correo === "") {
+        throw new Error("El correo no puede estar vacío.");
+    }
+
+    if (!correo.includes("@")) {
+        throw new Error("El correo no es válido.");
+    }
+
+    return "Formulario válido.";
+}
+
+try {
+    console.log(validarFormulario("Karen", "karen@gmail.com"));
+} catch (error) {
+    console.log("Error:", error.message);
+}
+</script>

@@ -1,0 +1,31 @@
+<script>
+    function crearCuenta() {
+    let saldo = 0;
+
+    function depositar(cantidad) {
+        saldo += cantidad;
+        return `Depósito realizado. Saldo actual: $${saldo}`;
+    }
+
+    function retirar(cantidad) {
+        if (cantidad <= saldo) {
+            saldo -= cantidad;
+            return `Retiro realizado. Saldo actual: $${saldo}`;
+        } else {
+            return "Saldo insuficiente.";
+        }
+    }
+
+    return {
+        depositar,
+        retirar
+    };
+}
+
+const cuenta = crearCuenta();
+
+console.log(cuenta.depositar(100000)); // Saldo: $100000
+console.log(cuenta.depositar(50000));  // Saldo: $150000
+console.log(cuenta.retirar(30000));    // Saldo: $120000
+console.log(cuenta.retirar(200000));   // Saldo insuficiente.
+</script>
